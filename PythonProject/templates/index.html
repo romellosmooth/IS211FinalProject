@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>The Transformation Rising Blog</h1>
+
+<h2>Blog Posts</h2>
+{% for post in posts %}
+    <h3>{{ post['title'] }}</h3>
+    <p>{{ post['content'] }}</p>
+    <p><small>By {{ post['author'] }} on {{ post['published_date'] }}</small></p>
+{% endfor %}
+{% endblock %}
